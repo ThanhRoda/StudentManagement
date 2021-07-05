@@ -52,4 +52,13 @@ public class LoginController {
             return new ResponseData<>(e.hashCode(),"", e.getMessage());
         }
     }
+    @GetMapping("/check")
+    public ResponseData<String> checkApi(){
+
+        try {
+            return  new ResponseData(0,"JWT Hợp lệ mới có thể thấy được message này","");
+        } catch (Exception e) {
+            return new ResponseData<>(e.hashCode(),"", e.getMessage());
+        }
+    }
 }
